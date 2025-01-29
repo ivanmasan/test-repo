@@ -10,7 +10,7 @@ def hello(count, name):
 def main():
     parser = argparse.ArgumentParser(description='Greet a user a specified number of times.')
     parser.add_argument('--count', type=int, default=1, help='Number of greetings.')
-    parser.add_argument('--name', required=True, help='The person to greet.')
+    parser.add_argument('--name', default='hehe', help='The person to greet.')
     
     args = parser.parse_args()
     hello(args.count, args.name)
